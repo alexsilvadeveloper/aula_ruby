@@ -23,7 +23,10 @@ class TesteCalculadora < Test::Unit::TestCase
 	end
 
 	def test_div_zero
-		assert_equal(0, @calc.div_zero(5, 0), '5 / 0 = 0')
+		assert_equal(5, @calc.div_zero(10, 2), '10 / 2 = 5')
+		assert_equal(0, @calc.div_zero(0, 0), '0 / 0 = 0')
+		assert_equal(10, @calc.div_zero(10, 0), '10 / 0 = 10')
+		assert_equal(10, @calc.div_zero(0, 10), '0 / 10 = 10')
 	end
 
 	def teardown

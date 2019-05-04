@@ -16,6 +16,12 @@ class Calculadora
 	end
 
 	def div_zero(a, b)
-		b == 0 ? b / a : a / b
+		if a == 0
+			return b / 1
+		elsif b == 0
+			return a / 1
+		end
+
+		a / b
 	end
 end
